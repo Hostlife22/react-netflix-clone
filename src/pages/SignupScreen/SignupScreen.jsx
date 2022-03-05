@@ -1,21 +1,24 @@
 import React, { useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { auth } from '../../firebase';
 import './SignupScreen.css';
 
 function SignupScreen() {
   const emailRef = useRef(null);
   const passwordRef = useRef(null);
+  const navigate = useNavigate();
 
   const register = (e) => {
     e.preventDefault();
 
     auth
       .createUserWithEmailAndPassword(emailRef.current.value, passwordRef.current.value)
-      .then((authUser) => {
-        console.log(authUser);
+      .then(() => {
+        navigate('/');
       })
       .catch((error) => {
-        alert(error.message);
+        console.error(error.message);
+        alert('Error during registration');
       });
   };
 
@@ -24,11 +27,12 @@ function SignupScreen() {
 
     auth
       .signInWithEmailAndPassword(emailRef.current.value, passwordRef.current.value)
-      .then((authUser) => {
-        console.log(authUser);
+      .then(() => {
+        navigate('/');
       })
       .catch((error) => {
-        alert(error.message);
+        console.error(error.message);
+        alert('You are not registered');
       });
   };
 
