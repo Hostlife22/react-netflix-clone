@@ -1,6 +1,6 @@
 # Netflix 2.0
 
-### [Site link](https://hulu-nextjs-app-one.vercel.app/)
+### [Site link](https://netflix-clone-ae764.web.app/)
 
  ### 🛠 The tech stack is:
 
