@@ -1,4 +1,4 @@
-# Hulu-nextJs-app
+# Netflix 2.0
 
 ### [Site link](https://hulu-nextjs-app-one.vercel.app/)
 
