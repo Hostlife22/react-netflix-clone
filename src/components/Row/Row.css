@@ -10,11 +10,17 @@
   overflow-y: hidden;
 }
 
+.row__container {
+  position: relative;
+  z-index: 1;
+}
+
 .row__posters::-webkit-scrollbar {
   display: none;
 }
 
 .row__poster {
+  z-index: 288;
   width: 100px;
   max-height: 100px;
   margin-right: 10px;

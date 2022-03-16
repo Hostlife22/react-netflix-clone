@@ -1,6 +1,9 @@
 import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 import axios from '../../API/axios';
+import SkeletonImage from '../SkeletonImage/SkeletonImage';
 import './Row.css';
 
 function Row({ title, fetchUrl, isLargeRow }) {
@@ -25,12 +28,15 @@ function Row({ title, fetchUrl, isLargeRow }) {
         {movies.map(
           (movie) =>
             ((isLargeRow && movie.poster_path) || (!isLargeRow && movie.backdrop_path)) && (
-              <img
-                className={`row__poster ${isLargeRow && 'row__posterLarge'}`}
-                key={movie.id}
-                src={`${baseUrl}${isLargeRow ? movie.poster_path : movie.backdrop_path}`}
-                alt={movie.name}
-              />
+              <div className="row__container" key={movie.id}>
+                <LazyLoadImage
+                  className={`row__poster ${isLargeRow && 'row__posterLarge'}`}
+                  alt={movie.name}
+                  effect="blur"
+                  src={`${baseUrl}${isLargeRow ? movie.poster_path : movie.backdrop_path}`}
+                />
+                <SkeletonImage isLargeRow={isLargeRow} />
+              </div>
             ),
         )}
       </div>
