@@ -1,4 +1,4 @@
-# react-netflix-site
+# Netflix 2.0
 
 ### [Site link](https://netflix-clone-ae764.web.app/)
 
