@@ -2,12 +2,13 @@
 
 ### [Site link](https://netflix-clone-ae764.web.app/)
 
- ### 🛠 The tech stack is:
-
+### 🛠 The tech stack is:
 
 - [React](https://reactjs.org/)
 - [React-router-dom](https://reactrouter.com/docs/en/v6/getting-started/overview)
 - [Redux-toolkit](https://redux-toolkit.js.org/)
+- [React-loading-skeleton](https://github.com/dvtng/react-loading-skeleton)
+- [React-lazy-load-image-component](https://github.com/Aljullu/react-lazy-load-image-component)
 - [Firebase authentication](https://firebase.google.com/)
 - [HTML5](https://en.wikipedia.org/wiki/HTML5)
 - [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
