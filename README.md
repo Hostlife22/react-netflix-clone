@@ -1,6 +1,10 @@
 # Netflix 2.0
 
-### [Site link](https://netflix-clone-ae764.web.app/)
+### [Site link](https://netflix-clone-ae764.firebaseapp.com/)
+
+<kbd>
+  <img align="right" alt="img" src="iURSL6N.jpeg"  />
+</kbd>
 
 ### 🛠 The tech stack is:
 
