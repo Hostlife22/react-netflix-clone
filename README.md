@@ -1,6 +1,6 @@
 # Netflix 2.0
 
-### [Site link](https://netflix-clone-ae764.firebaseapp.com/)
+### [Site link](https://melodic-bonbon-718d81.netlify.app/)
 
 <kbd>
   <img align="right" alt="img" src="iURSL6N.jpeg"  />
