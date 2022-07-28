@@ -1,9 +1,8 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import Nav from '../../components/Nav/Nav';
 import { selectSubscribe } from '../../features/subscribeSlice';
-import { selectUser } from '../../features/userSlice';
-import { auth } from '../../firebase';
+import { logout, selectUser } from '../../features/userSlice';
 import PlansScreen from '../PlansScren/PlansScreen';
 import './ProfileScreen.css';
 
@@ -15,6 +14,7 @@ const plans = [
 
 function ProfileScreen() {
   const user = useSelector(selectUser);
+  const dispatch = useDispatch();
   const { currentPlanId, renewalDate } = useSelector(selectSubscribe);
 
   return (
@@ -41,7 +41,7 @@ function ProfileScreen() {
                     renewalDate={renewalDate}
                   />
                 ))}
-              <button onClick={() => auth.signOut()} className="profileScreen__signOut">
+              <button onClick={() => dispatch(logout())} className="profileScreen__signOut">
                 Sign Out
               </button>
             </div>
